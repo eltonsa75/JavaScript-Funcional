@@ -19,10 +19,22 @@ function tornarLento(texto){
     return texto.split('').join(' ')
 }
 
-const resultado = composicao (
+
+// Composição de Funções #1
+const exagerado = composicao (
     gritar,
     enfatizar,
     tornarLento
-)('PARA')
+)
 
-console.log(resultado)
+// Composição de Funções #2
+const umPoucoMenosExagerado = composicao (
+    gritar,
+    enfatizar
+)
+
+const resultado1 = exagerado('PARA')
+const resultado2 = umPoucoMenosExagerado('Cuidado com o buraco!!!')
+
+console.log(resultado1)
+console.log(resultado2)
