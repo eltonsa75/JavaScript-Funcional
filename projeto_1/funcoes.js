@@ -1,6 +1,21 @@
 const fs = require('fs')
 const path = require('path')
 
+
+function composicao(...fns) {
+    return function (valor) {
+        return fns.reduce(async (acc, fn) => {
+            if(Promise.resolve(acc) === acc) {
+                return fn(await acc)
+            } else {
+                return fn(acc)
+            }
+        }, valor)
+    }
+}
+
+
+
 function lerDiretorio(caminho) {
     return new Promise((resolve, reject) => {
         try {
@@ -30,8 +45,10 @@ function lerArquivos(caminhos) {
 
 }
 
-function elementosTerminadosCom(array, padraoTextual) {
+function elementosTerminadosCom(padraoTextual) {
+    return function(array) {
     return array.filter(el => el.endsWith(padraoTextual))
+    }
 }
 
 function removerElementosSeVazio(array) {
@@ -39,7 +56,7 @@ function removerElementosSeVazio(array) {
 }
 
 function removerElementosSeIncluir(padraoTextual) {
-    return function (array) {
+    return function(array) {
         return array.filter(el => !el.includes(padraoTextual))
     }
 }
@@ -91,7 +108,9 @@ function ordernarPorAtribNumerico(attr, ordem = 'asc') {
     }
 }
 
+
 module.exports = {
+    composicao,
     lerDiretorio,
     elementosTerminadosCom,
     lerArquivo,
