@@ -1,0 +1,23 @@
+{
+  "name": "JavaScript-Funcional",
+  "version": "1.0.0",
+  "description": "PRINCÍPIOS DA PROGRAMAÇÃO FUNCIONAL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eltonsa75/JavaScript-Funcional.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eltonsa75/JavaScript-Funcional/issues"
+  },
+  "homepage": "https://github.com/eltonsa75/JavaScript-Funcional#readme",
+  "dependencies": {
+    "rxjs": "^6.6.3"
+  }
+}
