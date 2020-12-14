@@ -8,3 +8,7 @@ PRINCÍPIOS DA PROGRAMAÇÃO FUNCIONAL
 
 // Programação Reativa com RxJs
 
+
+Programação Reativa 
+
+import { Observable } from "rxjs"
