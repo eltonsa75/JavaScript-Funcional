@@ -12,3 +12,12 @@ PRINCÍPIOS DA PROGRAMAÇÃO FUNCIONAL
 Programação Reativa 
 
 import { Observable } from "rxjs"
+
+
+instalação do lodash
+
+npm i lodash
+
+
+Lambda Calculus
+
